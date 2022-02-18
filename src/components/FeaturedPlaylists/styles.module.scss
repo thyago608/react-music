@@ -1,0 +1,32 @@
+.container{
+    h1{
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+    padding-left: 2rem;
+}
+
+.containerPLaylists{
+    overflow-x: scroll;
+    padding: 1rem 0;
+
+    scrollbar-width: none;
+    scrollbar-color: #2c1591 #362d52;
+
+    &::-webkit-scrollbar {
+        height: 0.6rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #362d52;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #2c1591;
+        border-radius: 10px;
+    }
+}
+
+.playlists{
+    display: flex;
+}

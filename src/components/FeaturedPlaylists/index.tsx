@@ -14,10 +14,21 @@ export function FeaturedPlaylists(){
     // const [playlists, setPlaylists] = useState([]);
 
     return(
-        <div>
-           {playlists.map(playlist => (
-                <Playlist key={ playlist.tracksAmount} data={ playlist }/>
-           ))}
-        </div>
+        <section className={styles.container}>
+            <header>
+                <h1>Featured Playlists</h1>
+            </header>
+
+            <div className={styles.containerPLaylists}>
+                <div 
+                    className={styles.playlists}
+                    style={{ width: `${playlists.length * 300}px`}}
+                >
+                    {playlists.map(playlist => (
+                        <Playlist key={ playlist.tracksAmount} data={ playlist }/>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }

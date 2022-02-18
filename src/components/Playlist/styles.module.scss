@@ -1,12 +1,17 @@
 .container{
     display: flex;
     flex-direction:column;
+
+    width: min(300px, 100%);
+
+    & + &{
+        margin-left: 2rem;
+    }
 }
 
 .containerImage{
     order: -1;
 
-    width: 70%;
     height: 13rem;
     position: relative;
 
