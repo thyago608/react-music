@@ -1,17 +1,29 @@
+import { url } from "inspector";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 
-export function Playlist(){
-    return (
+type PlaylistProps = {
+    data:{
+        image: string;
+        title: string;
+        tracksAmount: number;
+    }
+};
+
+export function Playlist({ data }:PlaylistProps){
+    return(
         <section className={styles.container}>
             <header>
-                <h1 className={styles.titlePlaylist}>Only STARDUST</h1>
+                <h1 className={styles.playlistTitle}>{data.title}</h1>
             </header>
             
-            <div className={styles.containerImage}>
-                <Image src="/images/playlist1.jpg" alt="only stardust" layout="fill"/>
+            <div 
+                className={styles.containerImage}
+            >
+                <Image src={data.image} alt={data.title} layout="fill"/>
             </div>
-            <p className={styles.quantityTracks}>24 tracks</p>
+
+            <span className={styles.tracksAmountPlaylist}>{data.tracksAmount} tracks</span>
         </section>
     );
 }

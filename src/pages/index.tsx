@@ -1,3 +1,4 @@
+import { FeaturedPlaylists } from "components/FeaturedPlaylists";
 import Head from "next/head";
 import styles from "./home.module.scss";
 
@@ -7,6 +8,8 @@ export default function Home(){
         <Head>
             <title>React Music | Home</title>
         </Head>
+
+        <FeaturedPlaylists/>
     </>
   );
 }
