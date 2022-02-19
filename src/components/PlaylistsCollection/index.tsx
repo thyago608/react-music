@@ -9,14 +9,17 @@ const playlists = [
     { image:"/images/playlist4.jpg", title:"This is War", tracksAmount:42 }
 ];
 
+type CollectionProps = {
+    title:string;
+};
 
-export function FeaturedPlaylists(){
+export function PlaylistsCollection({ title }:CollectionProps){
     // const [playlists, setPlaylists] = useState([]);
 
     return(
         <section className={styles.container}>
             <header>
-                <h1>Featured Playlists</h1>
+                <h1>{title}</h1>
             </header>
 
             <div className={styles.containerPLaylists}>
